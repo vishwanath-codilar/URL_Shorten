@@ -1,0 +1,122 @@
+@import "color";
+.feature-section{
+    background-color: $Gray;
+    width: 100%;
+    padding-bottom: 12rem;
+.feature_cards{
+    width:82%;
+    margin: auto;
+    background-color: $Gray;
+    .feature-title{
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        h2{
+            color: $black;
+            font-size: 2.7rem;
+            margin: 0;
+            line-height: 1.5rem;
+            letter-spacing: -.15rem;
+
+        }
+        p{
+            margin-top: 1.8rem;
+            line-height: 2rem;
+            font-size: 1.1rem;
+            color: $Grayish_Violet;
+        }
+    }
+    .feature-card{
+        display: flex;
+        margin-top: 3rem;
+        justify-content: space-between;
+    .card{
+         width: 350px;
+        padding: 1.5rem;
+        background-color: $white;
+        margin: 1rem;
+        position: relative;
+        border-radius: 0.3rem;
+        z-index: 1;
+        .card-icon{
+            position: relative;
+            top:-4rem;
+            background-color:$VeryDarkBlue;
+            width: 88px;
+            height: 88px;
+            padding: 1.5rem;
+            border-radius: 50%;
+        }
+        .card-detail{
+            // margin-top: 4rem;
+            h3{
+                letter-spacing: -.03rem;
+                color: $black;
+                font-size: 1.7rem;
+            }
+            p{
+                font-size: 1.05rem;
+                color: $Gray;
+                margin-top: 1rem;
+            }
+        }
+    }
+    .record{
+        top: 5rem;
+    }
+    .Customizable{
+        top: 7rem;
+    }
+    &::after{
+        content: "";
+        background-color: $Cyan;
+        display: block;
+        width: 70%;
+        left: 12rem;
+        position: absolute;
+        height: 0.6rem;
+        margin-top: 11rem;
+    }
+   }
+}
+}
+@media  screen and (max-width: 850px) {
+.feature-section{
+  
+    .feature_cards{
+        text-align: center;
+        .feature-title{
+            width: 100%;
+            h2{
+                font-size: 1.8rem;
+            }
+        }
+        .feature-card{
+            flex-direction: column;
+            .card{
+                width:100%;
+                margin: auto auto 5rem;
+                
+                .card-icon{
+                    margin: auto;
+                    
+                }
+            }
+            .record{
+                top: 0;
+            }
+            .Customizable{
+                top: 0;
+            }
+            
+            &::after{
+                left: 49.5%;
+                 height: 90%;
+                 width: 0.5rem;
+            }
+        }
+       
+    }
+}
+
+}

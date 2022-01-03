@@ -1,0 +1,17 @@
+@import url(https://fonts.google.com/specimen/Poppins);
+*{
+    margin: 0;
+    padding: 0;
+    // border: 1px solid red;
+    box-sizing: border-box;
+    // overflow-x: hidden;
+}
+
+$white: white;
+
+.container{
+    margin-top: 3rem;
+    width: 100%;
+    font-family: [Poppins];
+   
+}

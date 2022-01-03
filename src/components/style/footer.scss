@@ -1,0 +1,128 @@
+@import "color";
+.footer_main{
+    background-color: $VeryDarkViolet;
+    .footer_sub1{
+        background-color: #3b3054;
+     
+        background-image: url("/bg-boost-desktop.svg");
+        background-size: cover;
+        height: 15rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .auth-reminder{
+            h1{
+                color: $white;
+                font-weight: 700;
+                font-size: 2.9rem;
+                margin: 0 0 0.5rem;
+                letter-spacing: -.13rem;
+                font-family: "Poppins",sans-serif;
+            }
+        }
+        .Get_started{
+            button{
+                color:  $white;
+                text-align: center;
+                font-weight: 700;
+                border-radius: 1.5rem;
+                border: 1px solid $Cyan;
+                background-color: $Cyan;
+                padding: 0.8rem 2rem;
+                font-size: 1.3rem;
+                cursor: pointer;
+                transition: .3s;
+                margin-top: 2rem;
+               }
+        }
+    }
+    .footer_sub2_main{
+        background-color: $VeryDarkViolet;
+        width: 100%;
+  
+    .footer_sub2{
+        margin: auto;
+        color: $white;
+        width: 82%;
+        display: flex;
+        padding-top: 3rem;
+    
+        .logo{
+            width: 40%;
+            text-align: start;
+            
+        }
+    
+            .footer-section{
+                display: flex;
+                flex-direction: column;
+                width: 15%;
+                margin-right: 2rem;
+                a{
+                    font-size: 1rem;
+                    line-height: 3rem;
+                    color: $Gray;
+                    text-decoration: none;
+                    &:hover{
+                        color: $Cyan;
+                    }
+                }
+            }
+        
+        .social_madia_icons{
+            width:25%;
+            img{
+            padding: 1rem;
+            cursor: pointer;
+            // display: flex;
+            }
+        }
+    
+    }
+  }
+  .created-by{
+      color: orange;
+      text-align: center;
+      letter-spacing: 0.4rem;
+      margin-top: 1rem;
+      padding-bottom: 2rem;
+  }
+}
+@media  screen and (max-width: 850px) {
+    .footer_main{
+        .footer_sub1{
+            background-image: url("/bg-boost-desktop.svg");
+            .auth-reminder{
+                h1{
+                    font-size: 1.8rem;
+                    letter-spacing: -.07rem;
+                    margin-bottom: 0.7rem;
+                }
+            }
+        }
+    .footer_sub2_main{
+        
+        .footer_sub2{
+            flex-direction: column;
+            text-align: center;
+            width: 100%;
+            .logo{
+                width: 100%;
+                text-align: center;
+                margin-top: 3rem;
+            }
+            .footer-section{
+                width:100%;
+                text-align: center;
+                margin-top: 3rem;
+            }
+            .social_madia_icons{
+                width: 100%;
+                text-align: center;
+                margin-top: 3rem;
+            }
+        }
+    }
+}
+}

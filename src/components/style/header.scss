@@ -1,0 +1,134 @@
+@charset 'UTF-8';
+@import 'grid';
+@import "color";
+.header_bar{
+    @include grid(2,20%,80%);
+    margin: auto;
+    color:  $Grayish_Violet;
+    font-weight: 700;
+    font-size: 16px;
+    box-sizing: border-box;
+    
+    .header_bar_left{
+        @include grid(4,1%,100%);
+        align-items: center;
+        text-align: center;
+         a{
+             text-decoration: none;
+             color:  $Grayish_Violet;
+         }
+        .h1{
+            font-size: 2rem;
+            font-weight: bold;
+            color: $black;
+        }
+    }
+    .header_bar_right{
+        // @include grid(2,1%,100%);
+        display: flex;
+        justify-content: end;
+     
+        text-align: center;
+        align-items: center;
+
+        
+         button{
+             height: 2.4rem;
+             width: 6rem;
+             background-color: $white;
+             border-radius: 20px;
+             border: none;
+             color:  $Grayish_Violet;
+             font-weight: 700;
+             font-size: 15px;
+             
+
+         }
+         .signup button{
+            background-color: $Cyan;
+            color: $white;
+        }
+       
+    }
+    .menu{
+        display: none;
+    }
+   
+}
+@media  screen and (max-width: 850px) {
+    .container{
+    .header_bar_left a:not(:first-child){
+        display: none;
+    }
+    .header_bar_right{
+        display: none;
+         
+    }
+    .banner_text{
+        text-align: center;
+        margin-right: 6rem;
+        h1{
+            font-size: 2.6rem;
+            line-height: 3rem;
+            letter-spacing: -.15rem;
+        }
+    }
+    .menu{
+        display: block;
+        text-align: end;
+        img{
+            width: 2rem;
+            
+        }
+        svg{
+            fill: $Gray;
+        }
+        
+        .hide{
+            display: none;
+           
+            &-show{
+                overflow-y: hidden;
+                display: block;
+                transition: 300s;
+                left: 10%;
+                top: 15%;
+                line-height: 4rem;
+                position: fixed;
+                z-index: 1;
+                padding: 10px;
+                border-radius: 0.5rem;
+                padding-bottom: 20px;
+                
+                a{
+                    text-decoration: none;
+                    color: $white;
+                    font-size: 20px;
+                }
+                button{
+                    width: 100%;
+                    font-weight: bold;
+                    height: 3.5rem;
+                    border-radius: 30px;
+                    background-color: $Cyan;
+                }
+                hr{
+                    border: 0.2px solid $Gray;
+                    margin: 24px 24px;
+                }
+            }
+           
+        }
+        .b{
+            display: flex;
+            
+            flex-direction: column;
+            background-color:  $DarkViolet;
+           
+            width: 82%;
+            text-align: center;
+        }
+    }
+    
+}
+}

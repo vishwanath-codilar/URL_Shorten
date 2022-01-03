@@ -1,0 +1,215 @@
+@import "color";
+
+.input_field{
+    background-color: $Gray;
+    .input_field_inner{
+        background-color: #3b3054;
+        background-repeat: no-repeat;
+        background-image: url("/bg-shorten-desktop.svg");
+        width: 82%;
+        margin: 0 auto;
+        height: 9rem;
+        border-radius: 0.7rem;
+        text-align: center;
+        
+        position: relative;
+        top: -4.5rem;
+        
+        //  justify-content: center;
+        form{width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        .input_url {
+            width: 75%;
+            position: relative;
+            // display: flex;
+            // flex-direction: column;
+            // row-gap: 10px;
+            .input{
+            height: 3.8rem;
+            width: 100%;
+            border-radius: 15px;
+            border: 2px solid $white;
+            padding-left: 1em;
+            font-weight: 500;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: $Grayish_Violet;
+            &-b{
+                border: 2px solid red;
+            }
+            
+            &:focus{
+                outline: none;
+            }
+        }
+        .errorMsg{
+            position: absolute;
+            font-size: 1rem;
+            left: 0;
+            top: calc(100% + 8px);
+            font-style: italic;
+            color: #f46262;
+           
+        }
+       
+        }
+        .input_submit {
+               width: 15%;
+               margin-left: 2rem;
+        input{
+            height: 3.8rem;
+            width: 100%;
+            border-radius: 15px;
+            background-color: $Cyan;
+            border: none;
+           
+            font-weight: 600;
+            font-size: 1.2rem;
+            text-align: center;
+            color: $white;
+        }
+    }
+    }
+}
+    .short_urls{
+        width: 100%;
+        height: auto;
+        text-align: center;
+        padding-bottom: 2rem;
+        ul li{
+            display: flex;
+            width: 82%;
+            background-color: $white;
+            height: 4rem;
+            margin: 0 auto 20px auto;
+            border-radius: 0.5rem;
+            font-size: 1.5rem;
+            transition: -3s;
+            
+            align-items: center;
+            .main_url{
+                width: 60%;
+                overflow: hidden;
+
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                text-align: start;
+                padding-left: 2.5rem;
+            }
+            .shrt_url{
+                width: 40%;
+                display: flex;
+                align-items: center;
+                padding: 20px;
+                
+                .url_link{
+                    width: 75%;
+                    color: $Cyan;
+                    &:hover{
+                        color:$Grayish_Violet
+                    }
+                    
+                }
+                .copy{
+                    width: 25%;
+                
+                    .button{
+                        color:  $white;
+                        text-align: center;
+                        font-weight: 700;
+                        margin: auto;
+                        border-radius: 0.4rem;
+                        border: 1px  solid $Cyan;
+                        background-color: $Cyan;
+                        height: 2.5rem;
+                        width: 100%;
+                        font-size: 1.2rem;
+                        cursor: pointer;
+                        transition: .3s;
+                        &:hover{
+                            background-color: rgb(125, 247, 252);
+                            border: 1px solid  rgb(125, 247, 252);;
+                        }
+                        &-btn{
+                            background-color: $VeryDarkBlue;
+                            border: 1px  solid $VeryDarkBlue;
+                            &:hover{
+                                background-color: $VeryDarkBlue;
+                            border: 1px  solid $VeryDarkBlue;
+                            }
+                        }
+                       
+                    }
+                }
+        }
+    }
+}
+}
+@media  screen and (max-width: 850px) {
+    .input_field{
+    .input_field_inner{
+        height: auto;
+        background-image: url("/bg-shorten-mobile.svg");
+        background-repeat: no-repeat;
+        form{
+        flex-direction: column;
+        padding: 1.2rem;
+        row-gap: 1.1rem;
+        .input_url{
+            width: 100%;
+            .input{
+            height: 2.8rem;
+            font-size: 1.1rem;
+        }
+     }
+        .input_submit{
+            width: 100%;
+            margin-left: 0;
+            input{
+                font-size: 1.1rem;
+                height: 3rem;
+            }
+        }
+        }
+    }
+    .short_urls{
+        height: auto;
+        ul li{
+            flex-direction: column;
+            height: auto;
+            align-items: center;
+            .main_url{
+                width: 100%;
+                height: 4rem;
+                // overflow: visible;
+                border-bottom: 1px solid $Gray;
+                padding-top: 20px;
+           
+            }
+            .shrt_url{
+                width: 100%;
+                flex-direction: column;
+                .url_link{
+                    width: 100%;
+                    text-align: start;
+                    height: 4rem;
+                    padding-top: 15px;
+                }
+                .copy{
+                    width: 100%;
+                 
+                    .button{
+                        width: 100%;
+                        height: 2rem;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+}

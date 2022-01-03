@@ -1,0 +1,15 @@
+@mixin grid($col,$mrg) {
+    
+    
+    display: grid;
+    grid-template-columns: repeat($col,1fr);
+    gap: $mrg;
+    
+}
+.row {
+    @include grid(3,4%);
+    
+    div{
+       background-color: blueviolet;
+    }
+}
