@@ -1,7 +1,7 @@
 @import "color";
 
 .input_field{
-    background-color: $Gray;
+    background-color:#f0f1f6;
     .input_field_inner{
         background-color: #3b3054;
         background-repeat: no-repeat;
@@ -108,11 +108,20 @@
                 
                 .url_link{
                     width: 75%;
-                    color: $Cyan;
-                    &:hover{
-                        color:$Grayish_Violet
+                    overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                   
+                    a{
+                        text-decoration: none;
+                        color: $Cyan;
+                       
+                        &:hover{
+                            color:$Grayish_Violet
+                        }
+                        
                     }
-                    
+                   
                 }
                 .copy{
                     width: 25%;
@@ -198,6 +207,9 @@
                     text-align: start;
                     height: 4rem;
                     padding-top: 15px;
+                    a{
+                        text-decoration: none;
+                    }
                 }
                 .copy{
                     width: 100%;

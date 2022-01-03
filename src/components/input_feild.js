@@ -47,7 +47,7 @@ export default class Input_feild extends Component {
                   this.setState({
                     status: true,
                     fetchingStatus: "Fetched",
-                    resultData: [...this.state.resultData,{main_url:this.state.input_value,short_url:response_data.result.short_link,id:new Date().getTime(),copied: false}],
+                    resultData: [...this.state.resultData,{main_url:response_data.result.original_link,short_url:response_data.result.full_short_link,id:new Date().getTime(),copied: false}],
                     errorMsg: "",
                     n: ""
                     
@@ -118,8 +118,14 @@ export default class Input_feild extends Component {
                       {this.state.status &&(<> {this.state.resultData.map((e,i)=>{
                             return(
                                 <li key={i}>
-                                  <div className="main_url">http://{e.main_url}</div>
-                                 <div className="shrt_url"><span className="url_link">http://{e.short_url}</span>
+                                  <div className="main_url">{e.main_url}</div>
+                                 <div className="shrt_url"><span className="url_link">
+
+                                   <a href={'https:'+e.short_url} target="_blank">{e.short_url}
+                                   
+                                   </a>
+                                   
+                                   </span>
                                   <span className="copy">
                                         <input
                                          className={
@@ -135,7 +141,7 @@ export default class Input_feild extends Component {
                                 
                                 </li>
                             )}
-                          )}</>)}
+                          ).reverse()}</>)}
 
     
                    </ul>
