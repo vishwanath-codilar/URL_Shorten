@@ -125,7 +125,7 @@ export default class Input_feild extends Component {
             </div>
 
             <div className="input_submit">
-              {" "}
+            
               <label For="input_submit">
                 <input type="submit" value={this.state.fetchingStatus} />
               </label>
