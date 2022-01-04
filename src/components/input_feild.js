@@ -138,7 +138,7 @@ export default class Input_feild extends Component {
               <>
               
                 {this.state.resultData
-                  .map((e, i) => {gi
+                  .map((e, i) => {
                     return (
                       <li key={i}>
                         <div className="main_url">{e.main_url}</div>
