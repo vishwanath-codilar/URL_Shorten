@@ -48,7 +48,7 @@ export default class Footer extends Component {
         </div>
         </div>
         <div className="created-by">
-          <h6>coded by : vishwanath</h6>
+          <span>coded by :</span><a href="https://github.com/vishwanath-codilar/URL_Shorten" target="_blank"> vishwanath</a>
         </div>
       </div>
     );

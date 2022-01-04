@@ -87,6 +87,10 @@
       letter-spacing: 0.4rem;
       margin-top: 1rem;
       padding-bottom: 2rem;
+      a{
+          text-decoration: none;
+          color: orange;
+      }
   }
 }
 @media  screen and (max-width: 850px) {
