@@ -112,8 +112,10 @@ export default class Input_feild extends Component {
         return val;
       }
     });
+    var result = window.confirm("Do you really want to delete ?");
+    if(result){
     this.setState({resultData: updated})
-
+    }
   }
  
 
@@ -165,7 +167,7 @@ export default class Input_feild extends Component {
                       <li key={i}>
                         <div className="main_url">
                           <span className="main_url-inner">{e.main_url}</span>
-                          <span className="delete"><button onClick={() => this.delete(e.id)}>Delete</button></span>
+                          
                           </div>
                         <div className="shrt_url">
                           <span className="url_link">
@@ -183,6 +185,7 @@ export default class Input_feild extends Component {
                               value={!e.copied ? "copy" : "copied"}
                             />
                           </span>
+                          <span className="delete"><img src="images/cancel-close-svgrepo-com.svg"onClick={() => this.delete(e.id)}/></span>
                         </div>
                       </li>
                     );
