@@ -95,17 +95,21 @@
                 display: flex;
                 justify-content: space-between;
                 width: 60%;
-                overflow: hidden;
-                 
-                white-space: nowrap;
-                text-overflow: ellipsis;
+             
+                 height: 60%;
+               
                 text-align: start;
                 padding: 0 1.9rem;
+                .main_url-inner{
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
                 .delete{
                     width: 15%;
                 button{
                     width: 100%;
-                    height: 85%;
+                    height: 80%;
                     border-radius: 1rem;
                     background-color: $Cyan;
                     border: none;

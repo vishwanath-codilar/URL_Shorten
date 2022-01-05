@@ -164,7 +164,7 @@ export default class Input_feild extends Component {
                     return (
                       <li key={i}>
                         <div className="main_url">
-                          <span>{e.main_url}</span>
+                          <span className="main_url-inner">{e.main_url}</span>
                           <span className="delete"><button onClick={() => this.delete(e.id)}>Delete</button></span>
                           </div>
                         <div className="shrt_url">
